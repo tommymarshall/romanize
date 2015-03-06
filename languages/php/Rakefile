@@ -1,7 +1,7 @@
 namespace :php do
   task :check do
     `which composer`
-    raise "Please ensure that you have composer installed" unless $?.success?
+    raise "Please ensure that you have composer installed. See https://getcomposer.org/" unless $?.success?
   end
 
   task :build => :check do
